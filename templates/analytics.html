@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h2>Аналитика</h2>
+    {% if plot_url %}
+        <img src="{{ url_for('static', filename='plots/data_plot.png') }}" alt="График данных">
+    {% else %}
+        <p>Данные не загружены или не поддерживаются.</p>
+    {% endif %}
+{% endblock %}
